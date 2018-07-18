@@ -19,7 +19,7 @@ class AuthController < ApplicationController
 
   def generate
     configure_index
-    render json: {secure_key: Algolia.generate_secured_api_key(ENV['ADMIN_API_KEY'], [])}
+    render json: {secure_key: Algolia.generate_secured_api_key(ENV['API_KEY'], [])}
   end
 
 end
